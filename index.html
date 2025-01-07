@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Function to toggle the menu visibility
+      function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-green-500 shadow-md">
+      <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <h1><img src="/img/icons8-bookstore-66.png" alt="Logo" class="h-8" /> Book Store</h1>
+        <!-- Menu Toggle Button (Hamburger) for Mobile -->
+        <button onclick="toggleMenu()" class="text-white block lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="space-x-6 flex items-center hidden lg:flex">
+          <a href="#" class="text-white hover:text-blue-500">ទំពរដើម</a>
+          <a href="#" class="text-white hover:text-blue-500">ហាង</a>
+          <a href="#" class="text-white hover:text-blue-500">ទនាក់ទំនង</a>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="ស្វែងរកសៀវភៅ..."
+              class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-blue-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zm8-8l-3.5-3.5" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Cart Button -->
+        <div>
+            <button class="bg-white text-blue-600 hover:text-white hover:bg-blue-500 px-6 py-2 rounded-full border-2 border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              រទេះ (0)
+            </button>
+          </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobileMenu" class="lg:hidden bg-green-500 text-white px-6 py-4 space-y-4 hidden">
+        <a href="#" class="block text-white hover:text-blue-500">ទំពរដើម</a>
+        <a href="#" class="block text-white hover:text-blue-500">ហាង</a>
+        <a href="#" class="block text-white hover:text-blue-500">ទនាក់ទំនង</a>
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="ស្វែងរកសៀវភៅ..."
+            class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-blue-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zm8-8l-3.5-3.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-blue relative">
+        <div class="container mx-auto px-6 text-center">
+          <img src="https://scontent.fpnh2-1.fna.fbcdn.net/v/t39.30808-6/352199722_287650237028937_6864282816898710400_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=E5B-iapBrMQQ7kNvgFG_lLn&_nc_zt=23&_nc_ht=scontent.fpnh2-1.fna&_nc_gid=A4UpxQuHGfV_Is4Fht64uZk&oh=00_AYAQplDFh-5HEswIKUraW684Q9kfMkluRX7nP0IuL6IC2Q&oe=678310E8" class="w-full h-auto object-cover" alt="Hero Image">
+        </div>
+      </section>
+
+    <!-- Featured Books Section -->
+    <section class="container mx-auto px-6 py-12">
+      <h3 class="text-3xl font-semibold text-gray-800 mb-8 text-center">សៀវភៅថ្មី</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Book Card -->
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img
+            src="https://www.fountofwisdomph.com/wp-content/uploads/2020/12/Hymnals-New-Dec102020.png"
+            alt="Book Cover"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">ចំរៀងខ្មែរ និងអន្តរជាតិ</h4>
+          <p class="text-gray-600 mb-4">ទំនុកតម្កើងដែលលក់ដាច់បំផុតដែលពេញនិយមក្នុងរយៈពេលជិតបីទសវត្សរ៍សម្រាប់ការថ្វាយបង្គំផ្ទាល់ខ្លួន និងជាក្រុមចាប់តាំងពីឆ្នាំ 1993 ដល់បច្ចុប្បន្ន។</p>
+          <p class="text-blue-600 font-bold text-lg mb-4">$15.99</p>
+          <a
+            href="#"
+            class="block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+          បន្ថែមទៅរទេះ
+          </a>
+        </div>
+
+        <!-- Repeat similar book cards -->
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img
+            src="https://www.fountofwisdomph.com/wp-content/uploads/2020/12/Khmer-Tune-Book-Hymns.png"
+            alt="Book Cover"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">សៀវភៅទំនុកតម្កើងតូច</h4>
+          <p class="text-gray-600 mb-4">វាមាន 80 បទ; ចម្រៀង​ទាំង​នោះ​មាន​ចំនួន ២៩ ដែល​បាន​បក​ប្រែ ហើយ ៥១ បទ​នោះ​ជា​បទ​ភ្លេង​កម្ពុជា។</p><br/><br/>
+          <p class="text-blue-600 font-bold text-lg mb-4">$18.99</p>
+          <a
+            href="#"
+            class="block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+          បន្ថែមទៅរទេះ
+          </a>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img
+            src="https://www.fountofwisdomph.com/wp-content/uploads/2020/12/47-Choruses-for-Praising-God.png"
+            alt="Book Cover"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">បន្ទរសម្រាប់សរសើរតម្កើងព្រះ</h4>
+          <p class="text-gray-600 mb-4">
+            សៀវភៅចម្រៀងយុវវ័យសៀវភៅ​ចម្រៀង​នេះ​មាន ៥៣ បទ​ដែល​សម​ស្រប​សម្រាប់​យុវវ័យ​ដើម្បី​លើក​តម្កើង​ព្រះអម្ចាស់។</p>
+          <p class="text-blue-600 font-bold text-lg mb-4">$2.50</p>
+          <a
+            href="#"
+            class="block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+          បន្ថែមទៅរទេះ
+          </a>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg">
+          <img
+            src="https://www.fountofwisdomph.com/wp-content/uploads/2020/12/46-Musical-Note.png"
+            alt="Book Cover"
+            class="w-full h-64 object-cover rounded-lg mb-4"
+          />
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">កំណត់សម្គាល់តន្ត្រី</h4>
+          <p class="text-gray-600 mb-4">ជាជំនួយដល់តន្ត្រីករខ្មែរគ្រឹស្</p><br/><br/><br/><br/>
+          <p class="text-blue-600 font-bold text-lg mb-4">$1.89</p>
+          <a
+            href="#"
+            class="block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+          បន្ថែមទៅរទេះ
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-500 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-sm">&copy; 2025 Bookstore. រក្សាសិទ្ធដោយBookstore</p>
+      </div>
+    </footer>
+  </body>
+</html>
